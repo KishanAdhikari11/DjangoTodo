@@ -1,1 +1,2 @@
-web: waitress-serve --port=$PORT testdj.wsgi:application
+release: python manage.py migrate
+web: gunicorn Todo.wsgi
